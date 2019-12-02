@@ -3,7 +3,9 @@
     "Parameters": {
         "VPCAZ": {
             "Type": "AWS::EC2::AvailabilityZone::Name",
-            "Description": "The Availability Zone to use for the simple VPC."
+            "Description": "The Availability Zone to use for the simple VPC.",
+            "AllowedPattern" : "^(?!us-west-2d).*$",
+            "ConstraintDescription": "Availability zone must not be us-west-2d."
         },
         "NumberOfNodes": {
             "Type": "Number",
